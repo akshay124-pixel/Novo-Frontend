@@ -8,12 +8,15 @@ function AdminUsers() {
 
   const getAllUsersData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/admin/user", {
-        method: "GET",
-        headers: {
-          Authorization: authorizationToken,
-        },
-      });
+      const response = await fetch(
+        "https://novo-backend-server-9hdn.onrender.com/api/admin/user",
+        {
+          method: "GET",
+          headers: {
+            Authorization: authorizationToken,
+          },
+        }
+      );
       const data = await response.json();
       console.log("users:", data);
       setUsers(data);
@@ -25,7 +28,7 @@ function AdminUsers() {
   const deleteuser = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/admin/user/delete/${id}`,
+        `https://novo-backend-server-9hdn.onrender.com/api/admin/user/delete/${id}`,
         {
           method: "DELETE",
           headers: {

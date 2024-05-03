@@ -25,12 +25,15 @@ const AuthProvider = ({ children }) => {
   const userAuthentication = async () => {
     try {
       setIsLoading(true);
-      const response = await fetch("http://localhost:5000/api/auth/user", {
-        method: "GET",
-        headers: {
-          Authorization: authorizationToken,
-        },
-      });
+      const response = await fetch(
+        "https://novo-backend-server-9hdn.onrender.com/api/auth/user",
+        {
+          method: "GET",
+          headers: {
+            Authorization: authorizationToken,
+          },
+        }
+      );
 
       if (response.ok) {
         const data = await response.json();
@@ -47,9 +50,12 @@ const AuthProvider = ({ children }) => {
   // Service Data Fetching
   const getServices = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/data/service", {
-        method: "GET",
-      });
+      const response = await fetch(
+        "https://novo-backend-server-9hdn.onrender.com/api/data/service",
+        {
+          method: "GET",
+        }
+      );
       if (response.ok) {
         const data = await response.json();
 

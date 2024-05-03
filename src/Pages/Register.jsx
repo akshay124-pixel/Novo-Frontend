@@ -24,11 +24,14 @@ function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/api/auth/Register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(user),
-      });
+      const response = await fetch(
+        "https://novo-backend-server-9hdn.onrender.com/api/auth/Register",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(user),
+        }
+      );
       const res_data = await response.json();
 
       if (response.ok) {

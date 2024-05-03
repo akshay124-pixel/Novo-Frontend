@@ -7,12 +7,15 @@ function AdminContacts() {
 
   const getAllContactData = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/admin/contact", {
-        method: "GET",
-        headers: {
-          Authorization: authorizationToken,
-        },
-      });
+      const response = await fetch(
+        "https://novo-backend-server-9hdn.onrender.com/api/admin/contact",
+        {
+          method: "GET",
+          headers: {
+            Authorization: authorizationToken,
+          },
+        }
+      );
       if (response.ok) {
         const data = await response.json();
         console.log("contacts:", data);
@@ -28,7 +31,7 @@ function AdminContacts() {
   const deleteContact = async (id) => {
     try {
       const response = await fetch(
-        `http://localhost:5000/api/admin/contact/delete/${id}`,
+        `https://novo-backend-server-9hdn.onrender.com/api/admin/contact/delete/${id}`,
         {
           method: "DELETE",
           headers: {
