@@ -8,7 +8,7 @@ function AdminContacts() {
   const getAllContactData = async () => {
     try {
       const response = await fetch(
-        "https://novo-backend-server-9hdn.onrender.com/api/admin/contact",
+        "https://novo-backend-server-1qds.onrender.com/api/admin/contact",
         {
           method: "GET",
           headers: {
@@ -31,7 +31,7 @@ function AdminContacts() {
   const deleteContact = async (id) => {
     try {
       const response = await fetch(
-        `https://novo-backend-server-9hdn.onrender.com/api/admin/contact/delete/${id}`,
+        `https://novo-backend-server-1qds.onrender.com/api/admin/contact/delete/${id}`,
         {
           method: "DELETE",
           headers: {

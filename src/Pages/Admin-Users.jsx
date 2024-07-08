@@ -9,7 +9,7 @@ function AdminUsers() {
   const getAllUsersData = async () => {
     try {
       const response = await fetch(
-        "https://novo-backend-server-9hdn.onrender.com/api/admin/user",
+        "https://novo-backend-server-1qds.onrender.com/api/admin/user",
         {
           method: "GET",
           headers: {
@@ -28,7 +28,7 @@ function AdminUsers() {
   const deleteuser = async (id) => {
     try {
       const response = await fetch(
-        `https://novo-backend-server-9hdn.onrender.com/api/admin/user/delete/${id}`,
+        `https://novo-backend-server-1qds.onrender.com/api/admin/user/delete/${id}`,
         {
           method: "DELETE",
           headers: {

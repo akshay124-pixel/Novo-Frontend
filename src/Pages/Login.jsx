@@ -24,7 +24,7 @@ function Login() {
 
     try {
       const response = await fetch(
-        "https://novo-backend-server-9hdn.onrender.com/api/auth/login",
+        "https://novo-backend-server-1qds.onrender.com/api/auth/login",
         {
           method: "POST",
           headers: {

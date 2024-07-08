@@ -4,7 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Pages/Context API";
 import { toast } from "react-toastify";
 function Register() {
-  const { storetokenInLS, API } = useContext(AuthContext);
+  const { storetokenInLS } = useContext(AuthContext);
   const [user, setUser] = useState({
     username: "",
     email: "",
@@ -25,7 +25,7 @@ function Register() {
     e.preventDefault();
     try {
       const response = await fetch(
-        "https://novo-backend-server-9hdn.onrender.com/api/auth/Register",
+        "https://novo-backend-server-1qds.onrender.com/api/auth/Register",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

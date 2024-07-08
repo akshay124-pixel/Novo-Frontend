@@ -26,7 +26,7 @@ const AuthProvider = ({ children }) => {
     try {
       setIsLoading(true);
       const response = await fetch(
-        "https://novo-backend-server-9hdn.onrender.com/api/auth/user",
+        "https://novo-backend-server-1qds.onrender.com/api/auth/user",
         {
           method: "GET",
           headers: {
@@ -51,7 +51,7 @@ const AuthProvider = ({ children }) => {
   const getServices = async () => {
     try {
       const response = await fetch(
-        "https://novo-backend-server-9hdn.onrender.com/api/data/service",
+        "https://novo-backend-server-1qds.onrender.com/api/data/service",
         {
           method: "GET",
         }

@@ -24,7 +24,7 @@ function AdminUpdate() {
   const getSingleUserData = async () => {
     try {
       const response = await fetch(
-        `https://novo-backend-server-9hdn.onrender.com/api/admin/user/${params.id}`,
+        `https://novo-backend-server-1qds.onrender.com/api/admin/user/${params.id}`,
         {
           method: "GET",
           headers: {
@@ -45,7 +45,7 @@ function AdminUpdate() {
     e.preventDefault();
     try {
       const response = await fetch(
-        `https://novo-backend-server-9hdn.onrender.com/api/admin/user/update/${params.id}`, // Include params.id in the URL
+        `https://novo-backend-server-1qds.onrender.com/api/admin/user/update/${params.id}`, // Include params.id in the URL
         {
           method: "PATCH",
           headers: {
